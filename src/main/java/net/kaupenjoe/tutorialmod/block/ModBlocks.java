@@ -134,10 +134,14 @@ public class ModBlocks {
             () -> new ModSaplingBlock(ModTreeGrowers.WALNUT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.END_STONE));
 
     public static final RegistryObject<Block> CHAIR = registerBlock("chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new TradingBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     public static final RegistryObject<Block> TRADING_BLOCK = registerBlock("trading_block",
-            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new TradingBlock(BlockBehaviour.Properties
+                    .of()
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()));
 
     public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));

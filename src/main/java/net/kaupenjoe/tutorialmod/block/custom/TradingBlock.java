@@ -8,13 +8,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import org.jetbrains.annotations.Nullable;
 
-
 public class TradingBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<TradingBlock> CODEC = simpleCodec(TradingBlock::new);
 
     public TradingBlock(Properties pProperties) {
         super(pProperties);
     }
+
 
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
