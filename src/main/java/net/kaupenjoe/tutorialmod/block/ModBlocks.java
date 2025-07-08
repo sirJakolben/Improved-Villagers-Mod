@@ -142,6 +142,12 @@ public class ModBlocks {
                     .strength(2.0f)
                     .sound(SoundType.WOOD)
                     .noOcclusion()));
+    public static final RegistryObject<Block> GONG = registerBlock("gong",
+            () -> new Gong(BlockBehaviour.Properties
+                    .of()
+                    .strength(3.0f)
+                    .sound(SoundType.COPPER)
+                    .noOcclusion()));
 
     public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));

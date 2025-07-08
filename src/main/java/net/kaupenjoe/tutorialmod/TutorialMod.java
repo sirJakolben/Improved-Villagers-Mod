@@ -119,6 +119,7 @@ public class TutorialMod {
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.TRADING_BLOCK);
+            event.accept(ModBlocks.GONG);
         }
     }
 
