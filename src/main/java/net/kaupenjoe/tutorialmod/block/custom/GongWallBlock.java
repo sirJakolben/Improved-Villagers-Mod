@@ -17,15 +17,15 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 
 import java.util.Map;
 
-public class Gong extends HorizontalDirectionalBlock {
-    public static final MapCodec<Gong> CODEC = simpleCodec(Gong::new);
+public class GongWallBlock extends HorizontalDirectionalBlock {
+    public static final MapCodec<GongWallBlock> CODEC = simpleCodec(GongWallBlock::new);
     private static final VoxelShape PLANK_NORTHSOUTH = Block.box(0.0, 14.0, 6.0, 16.0, 16.0, 10.0);
     private static final VoxelShape PLANK_EASTWEST = Block.box(6.0, 14.0, 0.0, 10.0, 16.0, 16.0);
     private static final VoxelShape SHAPE_NORTHSOUTH = Shapes.or(PLANK_NORTHSOUTH, Block.box(2.0, 0.0, 7.0, 14.0, 12.0, 9.0));
     private static final VoxelShape SHAPE_EASTWEST = Shapes.or(PLANK_EASTWEST, Block.box(7.0, 0.0, 2.0, 9.0, 12.0, 14.0));
 
 
-    public Gong(Properties pProperties) {
+    public GongWallBlock(Properties pProperties) {
         super(pProperties);
     }
 
