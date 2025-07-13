@@ -158,6 +158,7 @@ public class ModBlocks {
             () -> new GongBlockItem(GONG_CEILING.get(), GONG_WALL.get(), new Item.Properties()));
 
 
+
     public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()),true);
 

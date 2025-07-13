@@ -20,10 +20,8 @@ import java.util.Map;
 public class GongCeilingBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<GongCeilingBlock> CODEC = simpleCodec(GongCeilingBlock::new);
 
-    private static final VoxelShape PLANK_NORTHSOUTH = Block.box(0,14,6,16,16,10);
-    private static final VoxelShape PLANK_EASTWEST  = Block.box(6,14,0,10,16,16);
-    private static final VoxelShape SHAPE_NORTHSOUTH = Shapes.or(PLANK_NORTHSOUTH, Block.box(2,0,7,14,12,9));
-    private static final VoxelShape SHAPE_EASTWEST  = Shapes.or(PLANK_EASTWEST,  Block.box(7,0,2,9,12,14));
+    private static final VoxelShape SHAPE_NORTHSOUTH = Block.box(2,0,7,14,12,9);
+    private static final VoxelShape SHAPE_EASTWEST  =  Block.box(7,0,2,9,12,14);
 
     private static final Map<Direction, VoxelShape> AABBS = Map.of(
             Direction.NORTH, SHAPE_NORTHSOUTH,
