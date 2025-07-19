@@ -62,9 +62,6 @@ public class TutorialMod {
     public static final DeferredRegister<MemoryModuleType<?>> MEMORY_MODULE_TYPES =
             DeferredRegister.create(ForgeRegistries.MEMORY_MODULE_TYPES, MOD_ID);
 
-    public static final RegistryObject<MemoryModuleType<GlobalPos>> TRADING_BLOCK_POS =
-            MEMORY_MODULE_TYPES.register("trading_block_pos", () -> new MemoryModuleType<>(Optional.empty()));
-
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -94,8 +91,6 @@ public class TutorialMod {
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
 
-        MEMORY_MODULE_TYPES.register(modEventBus);
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
